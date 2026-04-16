@@ -64,14 +64,19 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 pip install reportlab weasyprint
 
+
 ---
 
 ## Desenvolvedor
 
 > [!TIP]
 > **Márcio Rodrigues de Oliveira**
-> *Engenheiro de Software | Engenheiro Civil*
+> *Engenheiro de Software | Engenheiro Civil | Engenheiro de Seg. do Trabalho*
 
+| Especialidade | Foco de Atuação |
+| :--- | :--- |
+| **Engenharia de Software** | Desenvolvimento Full-Stack, Automação e APIs de Alta Performance. |
+| **Engenharia Civil** | Gestão Pública, Licenciamento Ambiental e Infraestrutura. |
 
 ---
 
@@ -82,12 +87,9 @@ pip install reportlab weasyprint
 >
 > Este software é distribuído sob um regime de licenciamento comercial com as seguintes condições:
 > 
-> * **Trial Gratuito:** 180 dias de acesso total.
+> * **Trial Gratuito:** 180 dias de acesso total para avaliação.
 > * **Pós-Trial:** A renovação da licença é **obrigatória** para manter a funcionalidade de emissão de novos documentos oficiais (PDFs).
 >
 > *Garantindo a segurança jurídica e a integridade dos dados municipais.*
 
 ---
-<p align="center">
-  <b>Fiscaliza Ambiental</b> - Desenvolvido por Márcio Rodrigues de Oliveira
-</p>
