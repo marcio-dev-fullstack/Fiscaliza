@@ -43,30 +43,6 @@ O sistema conta com um motor de geração de documentos dinâmicos para automati
 
 ---
 
-## Como Rodar o Projeto
-
-### 1. Pré-requisitos
-* Python 3.10+
-* Node.js & NPM
-* PostgreSQL
-
-### 2. Instalação e Configuração
-```bash
-# Clonar o repositório
-git clone https://github.com/marcio-dev-fullstack/Fiscaliza.git
-
-# Criar e ativar ambiente virtual
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-# Instalar dependências de Backend e Motores de PDF
-pip install -r requirements.txt
-pip install reportlab weasyprint
-
-
----
-
 Desenvolvedor
 
 Márcio Rodrigues de Oliveira
@@ -83,3 +59,5 @@ Este software é distribuído sob um regime de licenciamento comercial, focado n
 1. **Trial Gratuito:** 180 dias de acesso total para avaliação.
 2. **Pós-Trial:** A renovação da licença é **obrigatória** para manter a funcionalidade de emissão de novos documentos oficiais (PDFs).
 3. **Restrição:** Após o prazo, o sistema entra em modo de consulta, bloqueando novas gerações de documentos até a regularização.
+
+
