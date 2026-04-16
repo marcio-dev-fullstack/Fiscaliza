@@ -43,19 +43,19 @@ O sistema conta com um motor de geração de documentos dinâmicos para automati
 
 ---
 
-Desenvolvedor
+## Desenvolvedor
 
 Márcio Rodrigues de Oliveira
 Engenheiro de Software | Engenheiro Civil
 
 ---
 
-Licenciamento
+## Licenciamento
 
-1. Modelo Comercial
+1. **Modelo Comercial**
 Este software é distribuído sob um regime de licenciamento comercial, focado na segurança jurídica e integridade dos dados municipais.
 
-2. Condições de Uso
+2. **Condições de Uso**
 1. **Trial Gratuito:** 180 dias de acesso total para avaliação.
 2. **Pós-Trial:** A renovação da licença é **obrigatória** para manter a funcionalidade de emissão de novos documentos oficiais (PDFs).
 3. **Restrição:** Após o prazo, o sistema entra em modo de consulta, bloqueando novas gerações de documentos até a regularização.
