@@ -67,13 +67,13 @@ pip install reportlab weasyprint
 
 ---
 
-** Desenvolvedor:
+**Desenvolvedor:**
 
 Márcio Rodrigues de Oliveira
 
 Engenharia de Software
 
-** Licenciamento:
+**Licenciamento:**
 
 Este software é distribuído sob um modelo de licenciamento comercial com um período de trial gratuito de 180 dias. 
 
