@@ -1,4 +1,4 @@
-# AppAmbiental
+# Fiscaliza Ambiental
 
 > **Sistema Integrado de Gestão e Monitoramento de Licenciamento Ambiental Municipal.**
 
@@ -6,14 +6,20 @@
 
 ![Versão](https://img.shields.io/badge/versão-1.0.0-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-orange?style=for-the-badge)
+![PDF-Engine](https://img.shields.io/badge/PDF-ReportLab%20%7C%20WeasyPrint-red?style=for-the-badge)
 ![License](https://img.shields.io/badge/licença-trial%20180%20dias-green?style=for-the-badge)
 
-O **Fiscaliza Ambiental** é uma solução de alta integridade técnica desenvolvida para automatizar o fluxo de licenciamento em Secretarias Municipais de Meio Ambiente. O sistema assegura a **imputabilidade** e a **segurança jurídica**, eliminando erros manuais em prazos regulatórios.
+O **Fiscaliza Ambiental** é uma solução de alta integridade técnica desenvolvida para automatizar o fluxo de licenciamento em Secretarias Municipais de Meio Ambiente. O sistema assegura a **imputabilidade** e a **segurança jurídica**, eliminando erros manuais em prazos regulatórios e garantindo a transparência na gestão pública.
 
-## Objetivos do Projeto
-* **Automação Regulatória:** Cálculo nativo de validade para LP, LI e LO.
-* **Integridade de Dados:** Bloqueio de campos críticos e logs imutáveis de auditoria vinculados ao CPF/ID.
-* **Soberania Local:** Arquitetura *Local-First* otimizada para intranets privadas com sincronização simultânea.
+---
+
+## Módulos de Geração de PDF (Documentos Oficiais)
+O sistema conta com um motor de geração de documentos dinâmicos para automatizar a emissão de:
+
+* **Gestão de Servidores:** Geração de fichas cadastrais detalhadas e relatórios de produtividade/atividades dos fiscais municipais.
+* **Cadastro de Empresas:** Emissão de comprovantes de registo, histórico de vistorias e situação cadastral ambiental.
+* **Licenciamento Automatizado:** Emissão de **LP (Prévia)**, **LI (Instalação)** e **LO (Operação)** com suporte a marcas de água e QR Code de autenticidade.
+* **Relatórios de Fiscalização:** Consolidação de dados para auditorias, monitoramento de prazos e relatórios de transparência para o portal municipal.
 
 ---
 
@@ -21,39 +27,47 @@ O **Fiscaliza Ambiental** é uma solução de alta integridade técnica desenvol
 
 | Camada | Tecnologia | Descrição |
 | :--- | :--- | :--- |
-| **Backend** | ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi) | APIs de alta performance e concorrência. |
-| **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react) | Interface SPA com Vite para agilidade no desktop. |
-| **Banco de Dados** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql) | Persistência relacional robusta. |
-| **Segurança** | ![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=json-web-tokens) | Autenticação e controle RBAC (Role Based Access Control). |
+| **Backend** | ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi) ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django) | APIs de alta performance e robustez administrativa com Python. |
+| **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react) ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript) | Interface SPA (Single Page Application) moderna, responsiva e otimizada. |
+| **PDF Engine** | ![Python](https://img.shields.io/badge/ReportLab-3776AB?style=flat-square&logo=python) | Geração de PDFs complexos com suporte a tabelas, imagens e lógica dinâmica. |
+| **Banco de Dados** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql) | Persistência de dados relacional com alta integridade e segurança. |
+| **Automação** | ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright) | Web scraping e automação de processos de consulta a portais governamentais. |
 
 ---
 
-## Matriz de Acessos (RBAC)
-O sistema utiliza quatro perfis distintos para garantir o compliance administrativo:
-
-1.  **Administradores:** Auditoria avançada e controle de parâmetros globais.
-2.  **Analistas Ambientais:** Gestão técnica e validação para emissão de licenças.
-3.  **Técnicos Ambientais:** Consultores externos realizando protocolos de serviços.
-4.  **Empreendimentos:** Acompanhamento transparente do status de regularização.
+## Objetivos e Funcionalidades
+* **Automação Regulatória:** Cálculo nativo de prazos de validade para licenças.
+* **Integridade de Dados:** Bloqueio de edição em campos críticos após a emissão e logs imutáveis de auditoria vinculados ao ID do utilizador.
+* **Gestão RBAC:** Controle de acesso baseado em funções (Administrador, Analista, Fiscal e Empresa).
+* **Soberania Local:** Arquitetura otimizada para funcionamento em intranets privadas com sincronização em nuvem.
 
 ---
 
 ## Como Rodar o Projeto
 
-### Pré-requisitos
+### 1. Pré-requisitos
 * Python 3.10+
+* Node.js & NPM
 * PostgreSQL
-* Node.js & NPM/Yarn
 
-### Instalação (Backend)
+### 2. Instalação e Configuração
 ```bash
 # Clonar o repositório
 git clone https://github.com/marcio-dev-fullstack/Fiscaliza.git
 
-# Criar ambiente virtual
+# Criar e ativar ambiente virtual
 python -m venv venv
-source venv/bin/activate  # Linux
+source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 
-# Instalar dependências
+# Instalar dependências de Backend e Motores de PDF
 pip install -r requirements.txt
+pip install reportlab weasyprint
+
+## Sobre o Desenvolvedor
+Márcio Rodrigues de Oliveira
+
+Engenharia de Software
+
+## Licenciamento
+Este software é distribuído sob um modelo de licenciamento comercial com um período de trial gratuito de 180 dias. Após este prazo, a renovação da licença é obrigatória para manter a funcionalidade de emissão de novos documentos oficiais.
