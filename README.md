@@ -68,30 +68,30 @@ pip install reportlab weasyprint
 ---
 
 
-## Desenvolvedor
+## Autor
 
-### 1. Identificação Profissional
-* **Nome:** Márcio Rodrigues de Oliveira
-* **Títulos:** Engenheiro de Software | Engenheiro Civil | Engenheiro de Seg. do Trabalho
-
-### 2. Especialidades e Foco de Atuação
-1. **Engenharia de Software:** Desenvolvimento Full-Stack, Automação e APIs de Alta Performance.
-2. **Engenharia Civil:** Gestão Pública, Licenciamento Ambiental e Infraestrutura.
-3. **Segurança do Trabalho:** Gestão de Riscos Ocupacionais e Conformidade Normativa.
+**Márcio Rodrigues de Oliveira | Desenvolvedor Líder Fullstack | cda.marcio@gmail.com**
 
 ---
 
-## Licenciamento
+### MIT License
 
-### 1. Modelo Comercial
-Este software é distribuído sob um regime de licenciamento comercial, focado na segurança jurídica e integridade dos dados municipais.
+### Copyright (c)
 
-### 2. Condições de Uso
-1. **Trial Gratuito:** 180 dias de acesso total para avaliação.
-2. **Pós-Trial:** A renovação da licença é **obrigatória** para manter a funcionalidade de emissão de novos documentos oficiais (PDFs).
-3. **Restrição:** Após o prazo, o sistema entra em modo de consulta, bloqueando novas gerações de documentos até a regularização.
+É concedida permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia
+deste software e arquivos de documentação associados (o "Software"), para lidar
+com o Software sem restrições, incluindo, sem limitação, os direitos
+de usar, copiar, modificar, fundir, publicar, distribuir, sublicenciar e/ou vender
+cópias do Software, e para permitir que as pessoas a quem o Software é
+fornecido o façam, sujeitas às seguintes condições:
 
----
-<p align="center">
-  <b>Fiscaliza Ambiental</b> - Desenvolvido por Márcio Rodrigues de Oliveira
-</p>
+O aviso de direitos autorais acima e este aviso de permissão devem ser incluídos em todas as
+cópias ou partes substanciais do Software.
+
+O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU
+IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO,
+ADEQUAÇÃO A UM FIM ESPECÍFICO E NÃO VIOLAÇÃO. EM NENHUMA HIPÓTESE OS
+AUTORES OU DETENTORES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUAISQUER REIVINDICAÇÕES, DANOS OU OUTRAS
+RESPONSABILIDADES, SEJA EM AÇÃO CONTRATUAL, EXTRACONTRATUAL OU DE OUTRA NATUREZA, DECORRENTES DE,
+OU RELACIONADAS COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES COM O
+SOFTWARE.
