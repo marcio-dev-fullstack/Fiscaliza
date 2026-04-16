@@ -65,6 +65,7 @@ pip install -r requirements.txt
 pip install reportlab weasyprint
 
 
+
 ---
 
 ## Desenvolvedor
@@ -72,11 +73,6 @@ pip install reportlab weasyprint
 > [!TIP]
 > **Márcio Rodrigues de Oliveira**
 > *Engenheiro de Software | Engenheiro Civil | Engenheiro de Seg. do Trabalho*
-
-| Especialidade | Foco de Atuação |
-| :--- | :--- |
-| **Engenharia de Software** | Desenvolvimento Full-Stack, Automação e APIs de Alta Performance. |
-| **Engenharia Civil** | Gestão Pública, Licenciamento Ambiental e Infraestrutura. |
 
 ---
 
