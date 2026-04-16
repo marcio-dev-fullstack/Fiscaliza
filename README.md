@@ -1,4 +1,6 @@
-# Fiscaliza Ambiental — Sistema de Gestão de Licenciamento (SEMMA)
+# Fiscaliza Ambiental
+
+## Sistema de Gestão de Licenciamento
 
 O **Fiscaliza Ambiental** é uma solução corporativa de alta integridade desenvolvida para automatizar e otimizar o fluxo de licenciamento em Secretarias Municipais de Meio Ambiente. O sistema foca em segurança de dados, automação de prazos regulatórios e rastreabilidade total de processos administrativos.
 
