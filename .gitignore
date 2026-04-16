@@ -1,0 +1,5 @@
+/ShareX/
+/Supabase.txt
+vendor/
+.env
+storage/*.key
