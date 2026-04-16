@@ -64,46 +64,30 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 pip install reportlab weasyprint
 
+---
+
+## Desenvolvedor
+
+> [!TIP]
+> **Márcio Rodrigues de Oliveira**
+> *Engenheiro de Software | Engenheiro Civil*
+
 
 ---
 
-## 👤 Desenvolvedor
-
-<table border="0">
-  <tr>
-    <td>
-      <img src="https://github.com/marcio-dev-fullstack.png" width="120px;" alt="Márcio Rodrigues de Oliveira"/>
-    </td>
-    <td>
-      <strong>Márcio Rodrigues de Oliveira</strong><br>
-      🚀 <em>Engenheiro de Software | Engenheiro Civil | Seg. do Trabalho</em><br>
-      <br>
-      <a href="https://github.com/marcio-dev-fullstack">
-        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-      </a>
-      <a href="https://www.linkedin.com/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-      </a>
-    </td>
-  </tr>
-</table>
-
----
-
-## Licenciamento e Uso
+## Licenciamento
 
 > [!IMPORTANT]
-> **Modelo de Licenciamento Comercial (Trial Ativo)**
-
-| Condição | Prazo | Funcionalidade |
-| :--- | :--- | :--- |
-| **Período de Trial** | `180 Dias` | Acesso total a todos os módulos e emissões. |
-| **Após o Prazo** | `Bloqueio` | Necessária renovação para emissão de novos documentos. |
-
-**Nota Técnica:** Este software é protegido e projetado para garantir a segurança jurídica municipal. Após o vencimento dos 180 dias de avaliação gratuita, o motor de geração de PDFs e a autenticação de licenças entrarão em modo de "Apenas Leitura" até que a licença comercial seja validada.
+> **Modelo de Licenciamento Comercial**
+>
+> Este software é distribuído sob um regime de licenciamento comercial com as seguintes condições:
+> 
+> * **Trial Gratuito:** 180 dias de acesso total.
+> * **Pós-Trial:** A renovação da licença é **obrigatória** para manter a funcionalidade de emissão de novos documentos oficiais (PDFs).
+>
+> *Garantindo a segurança jurídica e a integridade dos dados municipais.*
 
 ---
-
 <p align="center">
-  Desenvolvido: por Márcio Rodrigues de Oliveira - Engenharia de Software
+  <b>Fiscaliza Ambiental</b> - Desenvolvido por Márcio Rodrigues de Oliveira
 </p>
