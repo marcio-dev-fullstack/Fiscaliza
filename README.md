@@ -45,8 +45,7 @@ O sistema conta com um motor de geração de documentos dinâmicos para automati
 
 ## Desenvolvedor
 
-Márcio Rodrigues de Oliveira
-Engenheiro de Software | Engenheiro Civil
+Márcio Rodrigues de Oliveira | Engenheiro de Software | Engenheiro Civil
 
 ---
 
