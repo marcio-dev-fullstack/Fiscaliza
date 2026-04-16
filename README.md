@@ -64,14 +64,17 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 pip install reportlab weasyprint
 
+
 ---
 
-## Sobre o Desenvolvedor
+** Desenvolvedor:
+
 Márcio Rodrigues de Oliveira
 
 Engenharia de Software
 
-## Licenciamento
+** Licenciamento:
+
 Este software é distribuído sob um modelo de licenciamento comercial com um período de trial gratuito de 180 dias. 
 
 Após este prazo, a renovação da licença é obrigatória para manter a funcionalidade de emissão de novos documentos oficiais.
