@@ -48,7 +48,7 @@ O sistema utiliza quatro perfis distintos para garantir o compliance administrat
 ### Instalação (Backend)
 ```bash
 # Clonar o repositório
-git clone [https://github.com/marcio-dev-fullstack/Fiscaliza.git](https://github.com/marcio-dev-fullstack/Fiscaliza.git)
+git clone https://github.com/marcio-dev-fullstack/Fiscaliza.git
 
 # Criar ambiente virtual
 python -m venv venv
