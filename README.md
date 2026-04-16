@@ -1,58 +1,59 @@
 # AppAmbiental
 
-## Sistema de Gestão de Licenciamento
-
-O **Fiscaliza Ambiental** é uma solução corporativa de alta integridade desenvolvida para automatizar e otimizar o fluxo de licenciamento em Secretarias Municipais de Meio Ambiente. O sistema foca em segurança de dados, automação de prazos regulatórios e rastreabilidade total de processos administrativos.
+> **Sistema Integrado de Gestão e Monitoramento de Licenciamento Ambiental Municipal.**
 
 ---
 
-## Visão Geral e Governança
+![Versão](https://img.shields.io/badge/versão-1.0.0-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/licença-trial%20180%20dias-green?style=for-the-badge)
 
-Diferente de sistemas de gestão genéricos, o Fiscaliza Ambiental foi projetado para garantir a **imputabilidade** e a **segurança jurídica** no licenciamento ambiental municipal. O software assegura que as normas de validade sejam rigorosamente cumpridas através de automação sistêmica, eliminando erros humanos e edições arbitrárias de prazos.
+O **Fiscaliza Ambiental** é uma solução de alta integridade técnica desenvolvida para automatizar o fluxo de licenciamento em Secretarias Municipais de Meio Ambiente. O sistema assegura a **imputabilidade** e a **segurança jurídica**, eliminando erros manuais em prazos regulatórios.
 
-### Diferenciais Estratégicos
-
-* **Automação Regulatória:** Cálculo nativo de períodos de validade baseado na tipologia da licença (LP, LI, LO), com bloqueio de escrita em campos críticos para garantir a integridade temporal.
-* **Arquitetura Intranet (Local-First):** Otimizado para operação em rede local privada, permitindo a sincronização de até 5 estações de trabalho simultâneas sem dependência de nuvem externa.
-* **Protocolo de Auditoria Interna:** Registro imutável (logs) de todas as operações críticas, vinculando cada deferimento ou alteração ao CPF/ID do usuário responsável.
-
----
-
-## Arquitetura Técnica
-
-O projeto utiliza uma stack robusta, focada em performance e baixa manutenção:
-
-* **Backend:** Arquitetura RESTful utilizando Python (FastAPI/Django) ou Node.js, priorizando concorrência e segurança de dados.
-* **Frontend:** Interface Web SPA desenvolvida em React.js + Vite, oferecendo experiência de usuário ágil e responsiva para desktop.
-* **Persistência:** Banco de Dados Relacional PostgreSQL, configurado para alta disponibilidade em ambiente de rede local.
-* **Segurança:** Autenticação via JWT (JSON Web Tokens), criptografia de senhas com algoritmos de Hash (BCrypt) e controle de acesso granular (RBAC).
+## Objetivos do Projeto
+* **Automação Regulatória:** Cálculo nativo de validade para LP, LI e LO.
+* **Integridade de Dados:** Bloqueio de campos críticos e logs imutáveis de auditoria vinculados ao CPF/ID.
+* **Soberania Local:** Arquitetura *Local-First* otimizada para intranets privadas com sincronização simultânea.
 
 ---
 
-## Matriz de Acessos e Perfis (RBAC)
+## Stack Tecnológica
 
-O sistema opera com quatro níveis distintos de permissão para garantir o fluxo de trabalho correto:
-
-1.  **Administradores (Superusuários):** Gestão de parâmetros globais do sistema, auditoria avançada e controle de usuários.
-2.  **Analistas Ambientais (Gestores):** Perfil técnico da Secretaria responsável pela análise, validação e emissão final de licenças.
-3.  **Técnicos Ambientais:** Consultores e profissionais externos que realizam o protocolo de serviços e submissão de documentação.
-4.  **Empreendimentos/Empresas:** Entidades interessadas que acompanham o status de suas solicitações e regularizações.
-
----
-
-## Regras de Negócio e Compliance
-
-* **Imutabilidade de Prazos:** Uma vez emitida a licença, o vencimento é calculado automaticamente e o campo é desativado para edição manual. Alterações só são permitidas via processo de renovação ou retificação oficial registrada em log.
-* **Gestão de Trial (Licenciamento):** O software inclui um módulo de avaliação de 180 dias. O status da licença é exibido em tempo real na interface de autenticação.
-* **Deploy Local:** Configuração simplificada para ambiente de intranet através de IP fixo no servidor central, garantindo soberania de dados para a Secretaria.
+| Camada | Tecnologia | Descrição |
+| :--- | :--- | :--- |
+| **Backend** | ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi) | APIs de alta performance e concorrência. |
+| **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react) | Interface SPA com Vite para agilidade no desktop. |
+| **Banco de Dados** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql) | Persistência relacional robusta. |
+| **Segurança** | ![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=json-web-tokens) | Autenticação e controle RBAC (Role Based Access Control). |
 
 ---
 
-##  Desenvolvimento
+## Matriz de Acessos (RBAC)
+O sistema utiliza quatro perfis distintos para garantir o compliance administrativo:
 
-**Márcio Rodrigues de Oliveira** *Engenheiro de Software | Engenheiro Civil | Engenheiro de Segurança do Trabalho* 
-
-Especialista em soluções de automação para engenharia e gestão pública.
+1.  **Administradores:** Auditoria avançada e controle de parâmetros globais.
+2.  **Analistas Ambientais:** Gestão técnica e validação para emissão de licenças.
+3.  **Técnicos Ambientais:** Consultores externos realizando protocolos de serviços.
+4.  **Empreendimentos:** Acompanhamento transparente do status de regularização.
 
 ---
-> *Este software possui um período de licenciamento gratuito por 6 meses. Após este período, a renovação é necessária para manter a operabilidade do cadastro e emissão de novos documentos.*
+
+## Como Rodar o Projeto
+
+### Pré-requisitos
+* Python 3.10+
+* PostgreSQL
+* Node.js & NPM/Yarn
+
+### Instalação (Backend)
+```bash
+# Clonar o repositório
+git clone [https://github.com/marcio-dev-fullstack/Fiscaliza.git](https://github.com/marcio-dev-fullstack/Fiscaliza.git)
+
+# Criar ambiente virtual
+python -m venv venv
+source venv/bin/activate  # Linux
+venv\Scripts\activate     # Windows
+
+# Instalar dependências
+pip install -r requirements.txt
