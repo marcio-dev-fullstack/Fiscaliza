@@ -16,7 +16,7 @@ const Login = ({ setIsAuthenticated }) => {
 
     // CREDENCIAIS DEFINIDAS POR VOCÊ
     const ADMIN_EMAIL = "marcio@razgo.com.br";
-    const ADMIN_PASS = "mamst1ns";
+    const ADMIN_PASS = "123";
 
     if (email === ADMIN_EMAIL && password === ADMIN_PASS) {
       setIsAuthenticated(true);
@@ -68,7 +68,7 @@ const Login = ({ setIsAuthenticated }) => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="block w-full pl-10 pr-3 py-3 border border-slate-200 rounded-xl bg-slate-50 text-sm focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all outline-none"
-                  placeholder="marcio@razgo.com.br"
+                  placeholder="analista@sema.com.br"
                 />
               </div>
             </div>
