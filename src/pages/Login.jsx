@@ -1,130 +1,131 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { 
+  LockClosedIcon, 
+  EnvelopeIcon, 
+  ShieldCheckIcon 
+} from '@heroicons/react/24/outline';
 
-// --- CONFIGURAÇÃO DE SEGURANÇA MESTRE ---
-const CPF_MASTER = "633.740.302-97"; // MÁRCIO, INSIRA SEU CPF AQUI
-const SENHA_MASTER = "mamst1ns";
+const Login = ({ setIsAuthenticated }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-export default function Login({ onLogin, usuariosCadastrados, diasRestantes }) {
-  const [cpf, setCpf] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
-  // MÁSCARA DE CPF EM TEMPO REAL
-  const handleCpfChange = (e) => {
-    let value = e.target.value.replace(/\D/g, ""); // Remove tudo que não é número
-    
-    if (value.length <= 11) {
-      value = value.replace(/(\d{3})(\d)/, "$1.$2");
-      value = value.replace(/(\d{3})(\d)/, "$1.$2");
-      value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-      setCpf(value);
-      setError("");
-    }
-  };
-
-  const handleSubmit = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
 
-    // 1. Validação do Superusuário (Márcio)
-    if (cpf === CPF_MASTER && password === SENHA_MASTER) {
-      onLogin({ 
-        id: cpf, 
-        nome: "Márcio Rodrigues de Oliveira", 
-        role: "ADMIN",
-        label: "ADMINISTRADOR MASTER" 
-      });
-      return;
-    }
+    // CREDENCIAIS DEFINIDAS POR VOCÊ
+    const ADMIN_EMAIL = "marcio@razgo.com.br";
+    const ADMIN_PASS = "mamst1ns";
 
-    // 2. Validação dos Gestores/Analistas Cadastrados
-    const usuarioValidado = usuariosCadastrados.find(
-      (u) => u.cpf === cpf && u.senha === password
-    );
-
-    if (usuarioValidado) {
-      onLogin({ 
-        id: cpf, 
-        nome: usuarioValidado.nome, 
-        role: "ANALISTA",
-        label: "ANALISTA AMBIENTAL" 
-      });
+    if (email === ADMIN_EMAIL && password === ADMIN_PASS) {
+      setIsAuthenticated(true);
+      navigate("/"); // Redireciona para o Dashboard
     } else {
-      setError("Acesso negado. Verifique o CPF e a senha.");
+      alert("Acesso Negado: Credenciais de Administrador incorretas.");
     }
   };
 
   return (
-    <main className="relative min-h-screen flex items-center justify-center bg-slate-950 font-sans p-6 overflow-hidden">
-      {/* Background Decorativo */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2000')] bg-cover bg-center opacity-10" />
+    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4 relative overflow-hidden">
       
-      <div className="relative z-10 w-full max-w-md p-10 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[3rem] shadow-2xl">
-        <div className="mb-10 flex flex-col items-center">
-          <div className="bg-white p-3 rounded-2xl shadow-lg mb-4">
-             <img src="/logo.jpg" alt="Logo SEMMA" className="w-20 h-auto" />
-          </div>
-          <h1 className="text-4xl font-black text-green-500 uppercase tracking-tighter pt-4 border-t border-white/10 w-full text-center">
-            Fiscaliza
-          </h1>
-          <p className="text-[10px] font-bold text-white/30 uppercase tracking-[0.4em] mt-2">
-            Sistema de Gestão Ambiental
-          </p>
-        </div>
-
-        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-          <div className="space-y-1">
-            <label className="text-[10px] font-black text-white/40 uppercase ml-2 tracking-widest">
-              Acesso por CPF
-            </label>
-            <input 
-              type="text" 
-              placeholder="000.000.000-00"
-              required 
-              className="w-full bg-black/40 border border-white/10 rounded-2xl p-4 text-white text-lg text-center font-mono outline-none focus:border-green-500 transition-all shadow-inner"
-              value={cpf}
-              onChange={handleCpfChange}
-            />
-          </div>
-
-          <div className="space-y-1">
-            <label className="text-[10px] font-black text-white/40 uppercase ml-2 tracking-widest">
-              Senha de Segurança
-            </label>
-            <input 
-              type="password" 
-              placeholder="••••••••"
-              required 
-              className="w-full bg-black/40 border border-white/10 rounded-2xl p-4 text-white text-lg text-center outline-none focus:border-green-500 transition-all"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
-          {error && (
-            <p className="text-red-500 text-[10px] font-black uppercase text-center animate-bounce">
-              ⚠️ {error}
-            </p>
-          )}
-
-          <button 
-            type="submit" 
-            className="w-full mt-2 py-5 bg-green-600 text-white font-black rounded-2xl text-[10px] uppercase tracking-[0.2em] hover:bg-green-500 shadow-xl shadow-green-900/20 transition-all active:scale-95"
-          >
-            Validar Identidade
-          </button>
-        </form>
-
-        <div className="mt-12 p-5 rounded-[2rem] border border-white/5 bg-white/5 flex justify-between items-center">
-          <div className="flex flex-col">
-            <span className="text-[8px] font-black text-white/20 uppercase tracking-widest">Status da Licença</span>
-            <span className="text-green-500 font-black text-xs uppercase">Operacional</span>
-          </div>
-          <div className="text-right">
-            <span className="text-[8px] font-black text-white/20 uppercase tracking-widest">Expira em</span>
-            <span className="text-white/60 font-black text-xs block">{diasRestantes} DIAS</span>
-          </div>
-        </div>
+      {/* Elementos Decorativos de Fundo */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full" style={{ 
+          backgroundImage: 'radial-gradient(#1e293b 1px, transparent 1px)', 
+          backgroundSize: '40px 40px' 
+        }}></div>
       </div>
-    </main>
+
+      <div className="max-w-md w-full relative">
+        {/* Card de Login */}
+        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
+          
+          {/* Cabeçalho do Card */}
+          <div className="bg-emerald-700 p-8 text-center">
+            <div className="inline-flex p-3 bg-emerald-600 rounded-2xl mb-4 border border-emerald-500 shadow-inner">
+              <ShieldCheckIcon className="h-10 w-10 text-white" />
+            </div>
+            <h1 className="text-2xl font-black text-white uppercase tracking-tighter">
+              SISTEMA FISCALIZA
+            </h1>
+            <p className="text-emerald-100 text-[10px] mt-2 font-medium uppercase tracking-[0.2em]">
+              Gestão e Licenciamento Ambiental
+            </p>
+          </div>
+
+          {/* Formulário */}
+          <form onSubmit={handleLogin} className="p-8 space-y-5">
+            <div>
+              <label className="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1 tracking-widest">E-mail</label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <EnvelopeIcon className="h-5 w-5 text-slate-400" />
+                </div>
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="block w-full pl-10 pr-3 py-3 border border-slate-200 rounded-xl bg-slate-50 text-sm focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all outline-none"
+                  placeholder="marcio@razgo.com.br"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1 tracking-widest">Senha de Acesso</label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <LockClosedIcon className="h-5 w-5 text-slate-400" />
+                </div>
+                <input
+                  type="password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="block w-full pl-10 pr-3 py-3 border border-slate-200 rounded-xl bg-slate-50 text-sm focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all outline-none"
+                  placeholder="••••••••"
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full flex justify-center py-4 px-4 border border-transparent rounded-xl shadow-lg text-sm font-black uppercase tracking-widest text-white bg-slate-900 hover:bg-black transition-all active:scale-95"
+            >
+              Entrar no Sistema
+            </button>
+          </form>
+
+          {/* Rodapé do Card com Link RAZGO */}
+          <div className="bg-slate-50 p-6 border-t border-slate-100 text-center">
+            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-1">
+              Desenvolvido por
+            </p>
+            <a 
+              href="https://razgo.com.br/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="group transition-all"
+            >
+              <p className="text-sm font-black text-slate-800 group-hover:text-emerald-700 transition-colors uppercase tracking-tighter">
+                RAZGO <span className="text-emerald-600">TECNOLOGIA</span>
+              </p>
+              <p className="text-[9px] text-slate-400 font-medium group-hover:text-slate-600">
+                www.razgo.com.br
+              </p>
+            </a>
+          </div>
+        </div>
+
+        {/* Informação Legal de Rodapé */}
+        <p className="text-center mt-8 text-slate-500 text-[10px] font-medium uppercase tracking-tighter">
+        © 2026 RAZGO TECNOLOGIA. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
   );
-}
+};
+
+export default Login;
